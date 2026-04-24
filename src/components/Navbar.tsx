@@ -58,9 +58,10 @@ export default function Navbar() {
             )}
           </Link>
 
-          <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors hidden sm:block">
+          <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors hidden sm:block" title="User Profile">
             <User size={20} />
           </Link>
+
 
           <button className="md:hidden text-gray-300 hover:text-white transition-colors">
             <Menu size={24} />
