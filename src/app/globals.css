@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+  --color-secondary: #3b82f6;
+  --color-background: #0f0f0f;
+  --color-card: #121212;
+  --color-text: #ffffff;
+  --color-text-muted: #a1a1aa;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 6%; /* #0f0f0f */
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 7%; /* #121212 */
+    --card-foreground: 0 0% 100%;
+ 
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 100%;
+ 
+    --primary: 262 83% 58%; /* #7c3aed */
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 217 91% 60%; /* #3b82f6 */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .glass-card {
+    @apply bg-[#121212]/80 backdrop-blur-xl border border-white/5 shadow-xl shadow-purple-900/10 rounded-2xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+  .neon-glow {
+    @apply drop-shadow-[0_0_15px_rgba(124,58,237,0.5)];
+  }
+}
